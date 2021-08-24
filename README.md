@@ -1,4 +1,5 @@
-Algunas acotaciones para nombres:
+IMPORTANTE
+    Algunas acotaciones para nombres:
     *Nombres especificos para cada funcion y archivo que vayan a crear:
     El nombre debe ser acorde a su funcion, la aplicacion esta dividida en 3 capas
     Colocar cada archivo donde corresponde, si hay dudas escriban en el chat
@@ -29,7 +30,7 @@ Algunas acotaciones para nombres:
     --git commit -m "escriben en pocas palabras lo q hicieron"
     --git push -u origin master
 
-    --luego de q subieron los cambios, hacen un pull para recoger lo q hicieron los demas
+    luego de q subieron los cambios, hacen un pull para recoger lo q hicieron los demas
     --git pull
 
     *Imagenes:
