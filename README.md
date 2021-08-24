@@ -23,8 +23,9 @@ Algunas acotaciones para nombres:
     Se trabajara con github, en una sola rama para evitar inconvenientes, no modificar los archivos que no les corresponda
     se dividira el trabajo conforme cada quien se encargue de un o dos archivos.
     Actuualizar tu repositorio local constantemente, se haran cambios cada 1 hora
-    --git clone 
-    --git add .
+    --git clone //clonar el repositorio, solo se hace una vez
+    --git add (archivos q modificaron, no hagan con (.)xq se alteran todos)
 
     *Imagenes:
-    Ubicar Imagenes
+    Ubicar Imagenes del css en la carpeta Imagenes
+    las imagenes de los prodcutos vienen en una url q obitienen de aqui https://ibb.co/album/k2LmqS, ahi pueden copiar el html de la imagen
