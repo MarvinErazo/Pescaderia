@@ -36,3 +36,20 @@ IMPORTANTE
     *Imagenes:
     Ubicar Imagenes del css en la carpeta Imagenes
     las imagenes de los prodcutos vienen en una url q obitienen de aqui https://ibb.co/album/k2LmqS, ahi pueden copiar el html de la imagen
+
+    *Base de Datos:
+    Nombre DB: Proyecto
+    Tabla: Productos (id,nombre,descripcion,precio(por kg),url(imagen),categoria)
+
+
+    *Logica del negocio: Sera un sistema simple, con un CRUD unicamente para los prodcutos, no habra usuarios, se podra agregar, eliminar, mostrar y editar un producto.
+
+    *Pantallas: Seran 5 (Inicio, Productos, Comprar, Vender, Catalogo)
+    --Inicio: pantalla principal
+    --Productos: listado de productos por categoria (se accede a la opcion de compra)
+    --Vender: Formulario con los datos para agg producto
+    --Buscar: Producto encontrado, si no existe alert
+    --Editar: Formulario con los datos del producto
+    --Eliminar: Tabla con los productos y boton eliminar
+    --Catalogo: Pdf de los productos (Pueden ir por categoria si nos da tiempo)
+    --Ayuda: Ventana de ayuda al usuario, o tambien podemos agregar cada uno tooltips
