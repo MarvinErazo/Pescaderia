@@ -24,7 +24,13 @@ Algunas acotaciones para nombres:
     se dividira el trabajo conforme cada quien se encargue de un o dos archivos.
     Actuualizar tu repositorio local constantemente, se haran cambios cada 1 hora
     --git clone //clonar el repositorio, solo se hace una vez
-    --git add (archivos q modificaron, no hagan con (.)xq se alteran todos)
+
+    --git add (archivos q modificaron, no hagan con (.) xq se alteran todos)
+    --git commit -m "escriben en pocas palabras lo q hicieron"
+    --git push -u origin master
+
+    --luego de q subieron los cambios, hacen un pull para recoger lo q hicieron los demas
+    --git pull
 
     *Imagenes:
     Ubicar Imagenes del css en la carpeta Imagenes
