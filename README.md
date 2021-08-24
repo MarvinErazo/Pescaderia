@@ -35,3 +35,11 @@ Algunas acotaciones para nombres:
     *Imagenes:
     Ubicar Imagenes del css en la carpeta Imagenes
     las imagenes de los prodcutos vienen en una url q obitienen de aqui https://ibb.co/album/k2LmqS, ahi pueden copiar el html de la imagen
+    dado todo esto a la  larga se puede realizar diversos cambios por ejemplo ahora ...........
+     xd 
+     xd 
+     xd
+     x d
+      x
+      dxd
+      
