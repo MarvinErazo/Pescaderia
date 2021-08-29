@@ -1,80 +1,69 @@
-<?php
-    session_start();
-    
-    require 'database.php';
-     $message ="";
 
-    if(isset($_SESSION['nombre'])){
-        $records = $conn->prepare('SELECT nombre FROM usuario WHERE nombre=:nombre');
-        $records->bindParam(':nombre',$_SESSION['nombre']);
-        $records->execute();
-        $result = $records->fetch(PDO::FETCH_ASSOC);
-        $usuario = null;
 
-        if(count($result)>0){
-            $usuario = $result;
-        }
-    }
 
-    if(!empty($_POST['nombreP']) && !empty($_POST['cantidad']) && !empty($_POST['precio'])){
-        $total = 0;
-        $total = floatval($_POST['precio']) * floatval($_POST['cantidad']);
-        $sql = "INSERT INTO carrito (nombreU,nombreP,cantidad,total) VALUES (:nombreU,:nombreP,:cantidad,:total)";
-        $insert = $conn->prepare($sql);
-        $insert->bindParam(':nombreU',$_SESSION['nombre']);
-        $insert->bindParam(':nombreP',$_POST['nombreP']);
-        $insert->bindParam(':cantidad',$_POST['cantidad']);
-        $insert->bindParam(':total',$total);
-        $insert->execute();
-    }
-
-?>
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
-
-    <title>Document</title>
+    <title>Proyecto Aplicaciones</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Vista/Estilos/estiloproducto.css">
 </head>
 <body>
-<?php
-    require 'partials/header.php'
-?>
-<p>Prodcutos</p>
-    <?php if(!empty($usuario)): ?>
-        <?= $usuario['nombre'] ?>
-        <button><a href="carrito.php">carrito</a></button>
-        <a href="logout.php"><button>Cerrar Sesion</button></a>
+  <div class="contenidoPrincipal">
+    <div class="barranavegacion">
+        <img src="  https://uploads.disquscdn.com/images/46fe7b9cfbd6ec90491285e27226d3e8464cd4ee19e6afa13c61b72394b3efbc.png " class="logoEmpresa"  alt="">
+        <nav>
+            <ul>
+                <li><a href="../Pescaderia/index.php">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Categoria</a></li>
+            </ul>
+            
+        </nav>       
+            <a class="botoncarrito" href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <div class="contenido">
+        <h1 class="titulop">Productos</h1>
+        <div class="contenidoProductos">
+                <?php
+                    include("../Modelo/conexion.php");
+                        $query = "SELECT * FROM producto";
+                        $resultado = $conexion->query($query);
+                        while($row = $resultado->fetch_assoc()){
+                            ?>
+                                <div class="producto11">
+                                    <img src=<?php echo ($row['url']); ?> alt="" class="products__img">
+            
+                                    <h3 class="nombredelproducto"><?php echo $row['nombre'] ?></h3>
+                                    <p> <?php echo $row['descripcion'] ?>   </p>
+                                    
+                                    <span class="tipodelproducto"><?php echo $row['tipo'] ?></span>
+                                    <br>
+                                    <span class="precioodelproducto"><?php echo $row['precio'] ?></span>
+            
+                                    <button class="botonparacarro">
+                                        <i class="ri-shopping-bag-line buttoncompra"></i>
+                                    </button>
+                                </div>
+                            <div>
+                            </div>
+                            <?php
+                        }
+                        ?>
+        </div>
 
-    <?php else: ?>
-        <a href="login.php"><button>Login</button></a>
-        <a href="registrarse.php"><button>Registrarse</button></a>
-    <?php endif; ?>
-    <a href="productos.php"><button>productos</button></a>
-<?php
-    include_once("database.php");
-    $sql = "SELECT * FROM producto";
-    $results = mysqli_query($mysql, $sql) or die("database error:". mysqli_error($mysql));
-    while( $record = mysqli_fetch_assoc($results) ) {
-?>
-    <form action="productos.php" method="post">
-        <input type="text" value="<?= $record['nombre'] ?>" name="nombreP" readonly>
-        <p><?= $record['descripcion']?></p>
-        <input type="number" name="cantidad" placeholder="KG" value="1" min=1>
-        <br>
-        <label for=""> precio unitario</label>
-        <input type="number" value="<?= $record['precio'] ?>" name="precio" readonly>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-<?php
-  }  
-?>    
-<p><?php  echo $message ?></p>
+    </div>
+    
+  </div>  
+  
 </body>
 </html>

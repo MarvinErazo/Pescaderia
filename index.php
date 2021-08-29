@@ -34,7 +34,7 @@
         <nav>
             <ul>
                 <li><a href="../Pescaderia/index.php">Inicio</a></li>
-                <li><a href="">Productos</a></li>
+                <li><a href="../Pescaderia/Vista/productos.php">Productos</a></li>
                 <li><a href="">Categoria</a></li>
             </ul>
             
