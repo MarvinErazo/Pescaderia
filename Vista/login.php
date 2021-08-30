@@ -66,7 +66,7 @@
               <label class="input-fill">
               <input type="text" name="nombre"  value="" required>
                 <span class="input-label">  Usuario</span>
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-user-tie"></i>
               </label>
             </div>
             <div class="input-group">

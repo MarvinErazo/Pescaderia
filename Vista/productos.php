@@ -29,7 +29,7 @@
             </ul>
             
         </nav>       
-            <a class="botoncarrito" href="/Vista/agregar_al_carrito.php"><i class="fas fa-shopping-cart"></i></a>
+            
     </div>
     <div class="contenido">
         <h1 class="titulop">Productos</h1>
@@ -52,9 +52,7 @@
                                         <br>
                                         <span style="color: #3c8091;" class="precioodelproducto"><?php echo $row['precio'] ?></span>
                 
-                                        <button class="botonparacarro">
-                                            <i class="ri-shopping-bag-line buttoncompra"></i>
-                                        </button>
+                                        
                                         </form>
                                 </div>
                             <div>
