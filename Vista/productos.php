@@ -23,9 +23,9 @@
         <img src="  https://uploads.disquscdn.com/images/46fe7b9cfbd6ec90491285e27226d3e8464cd4ee19e6afa13c61b72394b3efbc.png " class="logoEmpresa"  alt="">
         <nav>
             <ul>
-                <li><a href="/index.php">Inicio</a></li>
+                <li><a href="../index.php">Inicio</a></li>
                 <li><a href="">Productos</a></li>
-                <li><a href="">Categoria</a></li>
+               
             </ul>
             
         </nav>       
