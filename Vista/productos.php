@@ -23,13 +23,13 @@
         <img src="  https://uploads.disquscdn.com/images/46fe7b9cfbd6ec90491285e27226d3e8464cd4ee19e6afa13c61b72394b3efbc.png " class="logoEmpresa"  alt="">
         <nav>
             <ul>
-                <li><a href="../Pescaderia/index.php">Inicio</a></li>
+                <li><a href="/index.php">Inicio</a></li>
                 <li><a href="">Productos</a></li>
                 <li><a href="">Categoria</a></li>
             </ul>
             
         </nav>       
-            <a class="botoncarrito" href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
+            <a class="botoncarrito" href="/Vista/agregar_al_carrito.php"><i class="fas fa-shopping-cart"></i></a>
     </div>
     <div class="contenido">
         <h1 class="titulop">Productos</h1>
@@ -41,18 +41,21 @@
                         while($row = $resultado->fetch_assoc()){
                             ?>
                                 <div class="producto11">
-                                    <img src=<?php echo ($row['url']); ?> alt="" class="products__img">
-            
-                                    <h3 class="nombredelproducto"><?php echo $row['nombre'] ?></h3>
-                                    <p> <?php echo $row['descripcion'] ?>   </p>
-                                    
-                                    <span class="tipodelproducto"><?php echo $row['tipo'] ?></span>
-                                    <br>
-                                    <span class="precioodelproducto"><?php echo $row['precio'] ?></span>
-            
-                                    <button class="botonparacarro">
-                                        <i class="ri-shopping-bag-line buttoncompra"></i>
-                                    </button>
+                                     <form action="agregar_al_carrito" method="post" >
+                                        <img src=<?php echo ($row['url']); ?> alt="" class="products__img">
+                
+                                        <h3 style="color: #3c8091;" class="nombredelproducto"><?php echo $row['nombre'] ?></h3>
+
+                                        <p> <?php echo $row['descripcion'] ?>   </p>
+
+                                        <span class="tipodelproducto"><?php echo $row['tipo'] ?></span>
+                                        <br>
+                                        <span style="color: #3c8091;" class="precioodelproducto"><?php echo $row['precio'] ?></span>
+                
+                                        <button class="botonparacarro">
+                                            <i class="ri-shopping-bag-line buttoncompra"></i>
+                                        </button>
+                                        </form>
                                 </div>
                             <div>
                             </div>
